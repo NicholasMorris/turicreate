@@ -185,12 +185,6 @@ class SupervisedLearningModel(Model):
         """
         return self.__proxy__.get_value(field)
 
-    @classmethod
-    def _get_queryable_methods(cls):
-        '''Returns a list of method names that are queryable through Predictive
-        Service'''
-        return {'predict': {}}
-
 
 class Classifier(SupervisedLearningModel):
     """

@@ -210,10 +210,6 @@ class TransformerBase(object):
         self.fit(data)
         return self.transform(data)
 
-    @classmethod
-    def _get_queryable_methods(cls):
-        return {'transform': {}}
-
     def _get_instance_and_data(self):
         raise NotImplementedError
 
@@ -371,9 +367,6 @@ class Transformer(TransformerBase):
         """
         return False
 
-    @classmethod
-    def _get_queryable_methods(cls):
-        return {'transform': {'data': 'sframe'}}
 
 class _SampleTransformer(Transformer):
 
